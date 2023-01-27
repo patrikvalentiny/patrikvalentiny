@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&vCenter=true&width=435&height=60&lines=Hi+there+%F0%9F%91%8B;My+name+is+Patrik!" alt="Typing SVG" /></a>
 </p>
-<h3 align="center">Computer Science student<br>From Slovakia 🇸🇰<br>Currently in Denmark 🇩🇰</h3>
+<h3 align="center">I am a Computer Science student<br>From Slovakia 🇸🇰<br>Currently in Denmark 🇩🇰</h3>
 
 - 📫 How to reach me **patrikvalentiny@gmail.com**
 
