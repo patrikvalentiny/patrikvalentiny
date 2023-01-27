@@ -7,7 +7,7 @@
 
 - 📫 How to reach me **patrikvalentiny@gmail.com**
 
-- 📄 Know about my experiences [CV](https://flowcv.com/resume/m01gvrch75)
+- 📄 Know about my experience [CV](https://flowcv.com/resume/m01gvrch75)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
