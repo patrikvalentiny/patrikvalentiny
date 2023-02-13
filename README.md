@@ -6,7 +6,7 @@
 <h3 align="center">I am a Computer Science student<br>From Slovakia 🇸🇰<br>Currently in Denmark 🇩🇰</h3>
 
 - 📫 How to reach me **patrikvalentiny@gmail.com**
-- <a href="https://flowcv.com/resume/m01gvrch75" target="_blank">📄 Know about my experience</a>
+- <a href="https://flowcv.com/resume/m01gvrch75" target="_blank" rel="noopener noreferrer">📄 Know about my experience</a>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
