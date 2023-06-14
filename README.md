@@ -21,7 +21,7 @@
 
 <!-- ![GitHub stats](https://github-readme-stats.vercel.app/api?username=patrikvalentiny&count_private=true&theme=dark&hide=stars&bg_color=30,e96443,904e95&title_color=fff&text_color=fff) -->
 
- ![GitHub stats](https://github-readme-stats.vercel.app/api?username=patrikvalentiny&count_private=true&theme=dark&hide=stars)
+ <!-- ![GitHub stats](https://github-readme-stats.vercel.app/api?username=patrikvalentiny&count_private=true&theme=dark&hide=stars) -->
  
   <a href="https://www.codewars.com/users/patrikvalentiny"><img src="https://github.r2v.ch/codewars?user=patrikvalentiny&top_languages=true&hide_clan=true&theme=gradient_by_level" alt="Codewars" /></a>
 <!--
