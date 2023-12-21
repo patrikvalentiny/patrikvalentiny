@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SocialLinkComponent } from './social-link/social-link.component';
 import {NgOptimizedImage} from "@angular/common";
 import { SocialLinksContainerComponent } from './social-links-container/social-links-container.component';
+import { PersonalHeaderComponent } from './personal-header/personal-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SocialLinkComponent,
-    SocialLinksContainerComponent
+    SocialLinksContainerComponent,
+    PersonalHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -5,8 +5,8 @@ import {Component, Input} from '@angular/core';
   selector: 'app-social-link',
   template: `
       <a href="{{link}}" target="_blank">
-          <div class="flex flex-row items-center justify-center py-1 px-2 h-16 bg-base-200 w-full rounded-full">
-              <img alt="socialIcon" ngSrc="{{iconLink}}" height="20" width="20"/>
+          <div class="flex flex-row items-center justify-center py-1 px-2 h-12 bg-base-200 w-full rounded-full">
+              <img alt="" ngSrc="{{iconLink}}" height="20" width="20"/>
               <p class="ml-2 text-lg font-bold">{{ title }}</p>
           </div>
       </a>
