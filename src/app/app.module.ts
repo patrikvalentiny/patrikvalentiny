@@ -8,6 +8,7 @@ import {NgOptimizedImage} from "@angular/common";
 import { SocialLinksContainerComponent } from './social-links-container/social-links-container.component';
 import { PersonalHeaderComponent } from './personal-header/personal-header.component';
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
+import { BasedInComponent } from './based-in/based-in.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
     SocialLinkComponent,
     SocialLinksContainerComponent,
     PersonalHeaderComponent,
-    GetInTouchComponent
+    GetInTouchComponent,
+    BasedInComponent
   ],
   imports: [
     BrowserModule,

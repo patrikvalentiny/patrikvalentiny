@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
           <p class="text-5xl text-center font-normal font-sans text-balance">
               Have a project in mind ?
           </p>
-          <button class="btn btn-primary btn-lg bg-orange-600 rounded-full">Get in touch</button>
+          <button class="btn btn-primary btn-lg bg-orange-600 rounded-full text-3xl">Get in touch</button>
       </div>
   `,
   styleUrl: './get-in-touch.component.css'
