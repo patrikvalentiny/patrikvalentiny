@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-get-in-touch',
@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
           <p class="text-5xl text-center font-normal font-sans text-balance">
               Have a project in mind ?
           </p>
-          <button class="btn btn-primary btn-lg bg-orange-600 rounded-full text-3xl">Get in touch</button>
+          <button class="btn btn-primary btn-lg bg-orange-600 rounded-full text-3xl"><a
+                  href="https://linkedin.com/in/patrikvalentiny" target="_blank">Get in touch</a></button>
       </div>
   `,
   styleUrl: './get-in-touch.component.css'
