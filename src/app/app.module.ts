@@ -7,13 +7,15 @@ import { SocialLinkComponent } from './social-link/social-link.component';
 import {NgOptimizedImage} from "@angular/common";
 import { SocialLinksContainerComponent } from './social-links-container/social-links-container.component';
 import { PersonalHeaderComponent } from './personal-header/personal-header.component';
+import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SocialLinkComponent,
     SocialLinksContainerComponent,
-    PersonalHeaderComponent
+    PersonalHeaderComponent,
+    GetInTouchComponent
   ],
   imports: [
     BrowserModule,
