@@ -9,8 +9,19 @@ module.exports = {
   plugins: [
     require("daisyui")
   ],
-  daisyui:{
-    themes: ["black"]
+  daisyui: {
+    themes: [
+      {
+        myThemeLight: {
+          "primary": "#000000",
+          "base-100": "#d02a02",
+          "base-content":"#000",
+          "secondary": "#f6d860",
+          "accent": "#37cdbe",
+          "neutral": "#3d4451",
+        }
+      },
+      "black", "dark", "light"]
   }
 }
 
