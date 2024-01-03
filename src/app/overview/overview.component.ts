@@ -28,6 +28,6 @@ export class OverviewComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.userLocation = "Trnie"
+    this.userLocation = "Your location"
   }
 }
