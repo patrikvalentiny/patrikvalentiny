@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, effect, inject, OnInit} from '@angular/core';
 import {WeatherService} from "../weather.service";
 import {TimeSeries} from "../weatherDto";
 
@@ -10,13 +10,13 @@ import {TimeSeries} from "../weatherDto";
 export class HourlyForecastComponent implements OnInit {
   private readonly weatherService: WeatherService = inject(WeatherService);
   series:TimeSeries[] = [];
-  constructor() { }
+  constructor() {
+    effect(() => {
+      this.series = this.weatherService.forecast()?.properties?.timeseries?.filter((_, index) => index < 63 && index % 3 === 0) ?? []
+    });
+  }
 
   async ngOnInit() {
-    const forecast = await this.weatherService.getLocalForecast()
-    if (forecast){
-      this.series = forecast.properties.timeseries.filter((_, index) => index < 63 && index % 3 === 0);
-    }
   }
 
 }

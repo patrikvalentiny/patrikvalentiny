@@ -6,8 +6,24 @@
 
       <div class="flex flex-row gap-1 justify-between">
         <label class="text-md font-semibold text-right w-12">{{ entry.time | date :"h a" }}</label>
-        <label class="text-md font-semibold capitalize text-left w-36">{{ entry.data.next_6_hours?.summary?.symbol_code ?? "clear"}}</label>
-        <label class="text-md font-semibold capitalize w-12 text-right">{{ entry.data.next_6_hours?.details?.precipitation_amount ?? 0}}%</label>
+        <label
+          class="text-md font-semibold capitalize text-left w-36">{{ entry.data.next_6_hours?.summary?.symbol_code ?? "clear" }}</label>
+        <div class="flex flex-row items-center justify-between w-16">
+          <svg class="w-6 h-full fill-base-content stroke-base-content"
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+          >
+            <path
+              stroke-width="2"
+              d="M12 21.5c-2.484 0-4.5-2.016-4.5-4.5s2.016-8.5 4.5-8.5s4.5 6.016 4.5 8.5s-2.016 4.5-4.5 4.5z"
+            />
+          </svg>
+
+
+          <label
+            class="text-md font-semibold capitalize  text-right w-full">{{ entry.data.next_6_hours?.details?.precipitation_amount ?? 0 }}
+            %</label>
+        </div>
 
         <label class="text-md font-semibold w-12 text-right">{{ entry.data.instant.details.air_temperature }}°</label>
       </div>

@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, effect, inject, OnInit} from '@angular/core';
 import {WeatherService} from "../weather.service";
 
 @Component({
@@ -16,17 +16,18 @@ export class OverviewComponent implements OnInit {
   precipitation: number = 0;
 
   constructor() {
+    effect(() => {
+      const forecast = this.weatherService.forecast();
+      if (forecast) {
+        this.currentDate = new Date(forecast.properties.timeseries.at(0)?.time ?? "");
+        this.currentTemperature = forecast.properties.timeseries.at(0)?.data.instant.details?.air_temperature ?? 0;
+        this.windSpeedKmh = forecast.properties.timeseries.at(0)?.data.instant.details?.wind_speed ?? 0;
+        this.precipitation = forecast.properties.timeseries.at(0)?.data.next_1_hours?.details?.precipitation_amount ?? 0;
+      }
+    });
   }
 
   async ngOnInit() {
     this.userLocation = "Trnie"
-    const currentWeather = await this.weatherService.getLocalForecast();
-    const currentDetails =  currentWeather?.properties.timeseries.at(0)?.data.instant.details
-    const nextHour = currentWeather?.properties.timeseries.at(0)?.data.next_1_hours?.details
-    this.currentTemperature = currentDetails?.air_temperature ?? 0
-    this.windSpeedKmh = currentDetails?.wind_speed ?? 0
-    this.precipitation = nextHour?.precipitation_amount ?? 0
   }
-
-
 }

@@ -1,20 +1,37 @@
-import {inject, Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {WeatherDto} from "./weatherDto";
-import {firstValueFrom} from "rxjs";
+import {inject, Injectable, OnInit, Signal, signal, WritableSignal} from '@angular/core';
+import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
+import {TimeSeries, WeatherDto} from "./weatherDto";
+import {firstValueFrom, Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class WeatherService {
+export class WeatherService implements OnInit {
   private readonly httpClient = inject(HttpClient);
   private readonly headers: HttpHeaders = new HttpHeaders();
+  forecast: WritableSignal<WeatherDto | null> = signal<WeatherDto | null>(null);
+  private forecastExpires: Date | null = null;
   constructor() {
     this.headers.append("User-Agent", "testingapi patrikvalentiny@gmail.com")
   }
 
+  async ngOnInit() {
+    const forecast = await this.getLocalForecast();
+  }
+
   async getForecast(lat:number, lon:number):Promise<WeatherDto | null> {
-    const call =  this.httpClient.get<WeatherDto>(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lon}`, {headers: this.headers})
-    return await firstValueFrom<WeatherDto>(call);
+      if (!this.forecast() || !this.forecastExpires || (this.forecastExpires && this.forecastExpires < new Date())) {
+        const call = this.httpClient.get<WeatherDto>(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lon}`, {
+          headers: this.headers,
+          observe: 'response'
+        });
+        const response = await firstValueFrom<HttpResponse<WeatherDto>>(call);
+        const headers = response.headers;
+        this.forecastExpires = new Date(headers.get('Expires') ?? "");
+        this.forecast.set(response.body);
+        return response.body;
+      } else {
+        return this.forecast();
+      }
   }
   async getLocalForecast(){
     const location = await this.getCurrentLocation();
