@@ -21,6 +21,17 @@ module.exports = {
           "neutral": "#3d4451",
         }
       },
+      {
+        myThemeDark: {
+          "primary": "#E5E5E5",
+          "base-100": "#000",
+          "base-content":"#E5E5E5",
+          "secondary": "#f6d860",
+          "accent": "#37cdbe",
+          "neutral": "#3d4451",
+        }
+      },
+
       "black", "dark", "light"]
   }
 }
