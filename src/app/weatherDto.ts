@@ -11,7 +11,7 @@ export interface Geometry {
 
 export interface Properties {
   meta: Meta
-  timeseries: Series[]
+  timeseries: TimeSeries[]
 }
 
 export interface Meta {
@@ -29,8 +29,8 @@ export interface Units {
   wind_speed: string
 }
 
-export interface Series {
-  time: string
+export interface TimeSeries {
+  time: Date
   data: Data
 }
 
