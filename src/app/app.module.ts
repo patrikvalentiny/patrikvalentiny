@@ -7,6 +7,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {HttpClientModule} from "@angular/common/http";
 import { HourlyForecastComponent } from './hourly-forecast/hourly-forecast.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HourlyForecastComponent } from './hourly-forecast/hourly-forecast.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
