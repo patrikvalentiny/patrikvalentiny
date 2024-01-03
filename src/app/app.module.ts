@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {HttpClientModule} from "@angular/common/http";
+import { HourlyForecastComponent } from './hourly-forecast/hourly-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
-    NavBarComponent
+    NavBarComponent,
+    HourlyForecastComponent
   ],
   imports: [
     BrowserModule,
