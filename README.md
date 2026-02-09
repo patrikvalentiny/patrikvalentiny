@@ -7,6 +7,8 @@
 
 - 📫 How to reach me **patrikvalentiny@gmail.com**
 - <a href="https://flowcv.com/resume/m01gvrch75" target="_blank" rel="noopener noreferrer">📄 Know about my experience</a>
+- <a href="https://github.com/pvEASV" target="_blank" rel="noopener noreferrer">🛠️ You can find all my course projects here</a>
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
